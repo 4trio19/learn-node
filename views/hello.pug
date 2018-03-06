@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  div.container
+    p Hello! #{name}
+    h2 something happens in #{h.moment().endOf('day').add(1, 'hour').fromNow()}
+    img(src="dog.jpg" alt=`${name}`)
