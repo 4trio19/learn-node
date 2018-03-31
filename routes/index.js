@@ -34,4 +34,8 @@ router.get('/reverse/:name', (req, res) => {
   res.send(reversed);
 });
 
+
+router.get('/tags', catchErrors(storeController.getStoresByTag));
+router.get('/tags/:tag', catchErrors(storeController.getStoresByTag));
+
 module.exports = router;
